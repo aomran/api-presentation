@@ -6,6 +6,9 @@ class API::V1::ContactsController < ApplicationController
   def index
     @contacts = Contact.all
 
+    # Search
+    @contacts = @contacts.search(params[:q]) if params[:q]
+
     # Filter for relationship
     @contacts = @contacts.relationship(params[:relationship]) if params[:relationship]
 
