@@ -6,7 +6,11 @@ class ContactsController < ApplicationController
   def index
     @contacts = Contact.all
 
-    render json: @contacts
+    if params[:relationship]
+      render json: @contacts.relationship(params[:relationship])
+    else
+      render json: @contacts
+    end
   end
 
   # GET /contacts/1
