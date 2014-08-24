@@ -1,4 +1,4 @@
-class ContactsController < ApplicationController
+class API::V1::ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :update, :destroy]
 
   # GET /contacts
@@ -6,11 +6,10 @@ class ContactsController < ApplicationController
   def index
     @contacts = Contact.all
 
-    if params[:relationship]
-      render json: @contacts.relationship(params[:relationship])
-    else
-      render json: @contacts
-    end
+    # Filter for relationship
+    @contacts = @contacts.relationship(params[:relationship]) if params[:relationship]
+
+    render json: @contacts
   end
 
   # GET /contacts/1
