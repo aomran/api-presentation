@@ -9,6 +9,9 @@ class API::V1::ContactsController < ApplicationController
     # Filter for relationship
     @contacts = @contacts.relationship(params[:relationship]) if params[:relationship]
 
+    # Order by
+    @contacts = @contacts.order(params[:order].gsub(':', ' ')) if params[:order]
+
     render json: @contacts
   end
 
