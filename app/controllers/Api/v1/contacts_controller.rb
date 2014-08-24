@@ -23,13 +23,13 @@ class API::V1::ContactsController < ApplicationController
     end
 
 
-    render json: @contacts
+    render json: @contacts if stale?(etag: @contacts.all, last_modified: @contacts.maximum(:updated_at))
   end
 
   # GET /contacts/1
   # GET /contacts/1.json
   def show
-    render json: @contact
+    render json: @contact if stale?(@contact)
   end
 
   # POST /contacts
