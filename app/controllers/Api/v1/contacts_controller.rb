@@ -15,6 +15,14 @@ class API::V1::ContactsController < ApplicationController
     # Order by
     @contacts = @contacts.order(params[:order].gsub(':', ' ')) if params[:order]
 
+    # Pagination
+    if (params[:offset] && params[:limit])
+      @contacts = @contacts.page(1).per(params[:limit]).padding(params[:offset])
+    else
+      @contacts = @contacts.page(1).per(25)
+    end
+
+
     render json: @contacts
   end
 

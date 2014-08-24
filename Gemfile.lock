@@ -36,6 +36,9 @@ GEM
     hike (1.2.3)
     i18n (0.6.11)
     json (1.8.1)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -98,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  kaminari
   pry-rails
   rails (= 4.1.4)
   rails-api

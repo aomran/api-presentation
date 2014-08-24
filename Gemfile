@@ -11,6 +11,8 @@ gem 'sqlite3'
 gem 'active_model_serializers'
 
 gem 'pry-rails'
+
+gem 'kaminari'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
