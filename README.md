@@ -1,6 +1,6 @@
 # Designing & Building  -- RESTful JSON APIs
 
-This is a sample app I built to accompany the talk I gave at Ottawa's Ruby Meetup. To see the slides and video of the talk please go to [http://www.aomran.com/designing--building-restful-json-apis/](http://www.aomran.com/designing--building-restful-json-apis/)
+This is a sample app I built to accompany the talk I gave at Ottawa's Ruby Meetup. To see the slides and video of the talk please go to [http://www.aomran.com/designing-building-restful-json-apis/](http://www.aomran.com/designing--building-restful-json-apis/)
 
 EasyContacts is simply a contact list so the API should be relatively easy to understand.
 
